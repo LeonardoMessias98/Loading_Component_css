@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 0;
+}
+
+.info a {
+  color: #9c9c9c;
+  text-decoration: none;
+}
+
+.info a,
+.info h1.name {
+  font-family: Roboto;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Loading 3 dots */
+
+.dotsLoad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+}
+
+.loads {
+  width: 100vw;
+  height: 100vh;
+}
+
+.dot {
+  background-color: #5d5db9;
+  border-radius: 50%;
+
+  height: 50px;
+  width: 50px;
+
+  margin: 10px;
+
+  animation: move ease-in-out 1.5s infinite;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.4s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  50% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Loading in circle shape */
+
+.circleLoad {
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circleLoad .circle {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #d3def7;
+  border-radius: 50%;
+  border-top-color: #5d5db9;
+
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
